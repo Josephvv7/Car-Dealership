@@ -52,7 +52,7 @@ public class Dealership {
     public List<Vehicle> getVehiclesByYear(int min, int max) {
         return null;
     }
-    public List<Vehicle> getVehiclesByColo(String color) {
+    public List<Vehicle> getVehiclesByColor(String color) {
         return null;
     }
     public List<Vehicle> getVehiclesByMileage(int min, int max) {
