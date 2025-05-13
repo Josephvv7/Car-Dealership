@@ -23,24 +23,34 @@ public class UserInterface {
             switch (choice) {
                 case 1:
                     getByPriceRequest();
+                    break;
                 case 2:
                     getByMakeModelRequest();
+                    break;
                 case 3:
                     getByYearRequest();
+                    break;
                 case 4:
                     getByColorRequest();
+                    break;
                 case 5:
                     getByMileageRequest();
+                    break;
                 case 6:
                     getByVehicleTypeRequest();
+                    break;
                 case 7:
                     getAllVehiclesRequest();
+                    break;
                 case 8:
                     addVehicleRequest();
+                    break;
                 case 9:
                     removeVehicleRequest();
+                    break;
                 case 99:
                     running = false;
+                    break;
                 default:
                     System.out.println("INVALID CHOICE TRY AGAIN");
             }
@@ -104,9 +114,9 @@ public class UserInterface {
 
     private void getByMakeModelRequest() {
         System.out.println("\n--- SEARCH BY MAKE/MODEL ---");
-        System.out.println("ENTER MAKE: ");
+        System.out.print("ENTER MAKE: ");
         String make = scanner.nextLine();
-        System.out.println("ENTER MODEL: ");
+        System.out.print("ENTER MODEL: ");
         String model = scanner.nextLine();
         List<Vehicle> vehicles = dealership.getVehiclesByMakeModel(make, model);
         displayVehicles(vehicles);
@@ -122,7 +132,7 @@ public class UserInterface {
 
     private void getByColorRequest() {
         System.out.println("\n--- SEARCH BY COLOR ---");
-        System.out.println("ENTER COLOR: ");
+        System.out.print("ENTER COLOR: ");
         String color = scanner.nextLine();
         List<Vehicle> vehicles = dealership.getVehiclesByColor(color);
         displayVehicles(vehicles);
@@ -138,7 +148,7 @@ public class UserInterface {
 
     private void getByVehicleTypeRequest() {
         System.out.println("\n--- SEARCH BY VEHICLE TYPE ---");
-        System.out.println("ENTER VEHICLE TYPE (CAR, TRUCK, SUV, VAN): ");
+        System.out.print("ENTER VEHICLE TYPE (CAR, TRUCK, SUV, VAN): ");
         String type = scanner.nextLine();
         List<Vehicle> vehicles = dealership.getVehiclesByType(type);
         displayVehicles(vehicles);
@@ -154,13 +164,13 @@ public class UserInterface {
         System.out.println("\n--- ADD NEW VEHICLE ---");
         int vin = getIntInput("ENTER VIN: ");
         int year = getIntInput("ENTER YEAR: ");
-        System.out.println("ENTER MAKE: ");
+        System.out.print("ENTER MAKE: ");
         String make = scanner.nextLine();
-        System.out.println("ENTER MODEL: ");
+        System.out.print("ENTER MODEL: ");
         String model = scanner.nextLine();
-        System.out.println("ENTER VEHICLE TYPE (CAR, TRUCK, SUV, VAN): ");
+        System.out.print("ENTER VEHICLE TYPE (CAR, TRUCK, SUV, VAN): ");
         String type = scanner.nextLine();
-        System.out.println("ENTER COLOR: ");
+        System.out.print("ENTER COLOR: ");
         String color = scanner.nextLine();
         int odometer = getIntInput("ENTER MILEAGE: ");
         double price = getDoubleInput("ENTER PRICE: ");
